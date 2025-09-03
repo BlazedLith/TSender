@@ -1,11 +1,19 @@
 'use client';
 
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
-import { anvil, zksync } from 'wagmi/chains';
+import {
+    arbitrum,
+    base,
+    mainnet,
+    optimism,
+    anvil,
+    zksync,
+    sepolia,
+} from 'wagmi/chains';
 
 export default getDefaultConfig({
     appName: 'Tsender',
     projectId: process.env.NEXT_PUBLIC_WALLET_PROJECT_ID!,
-    chains: [anvil, zksync],
+    chains: [arbitrum, base, mainnet, optimism, anvil, zksync, sepolia],
     ssr: false,
 });
